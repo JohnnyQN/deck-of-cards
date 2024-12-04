@@ -1,35 +1,56 @@
 body {
-  text-align: center;
-  background-color: green;
+    text-align: center;
+    background-color: green;
 }
-
+  
 button {
-  padding: 15px;
-  background-color: black;
-  color: white;
-  border-radius: 8px;
-  border: none;
-  display: none;
-  margin: 0 auto;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    display: block; 
+    margin: 10px auto; 
 }
 
 button:hover {
-  cursor: pointer;
-  background-color: #444;
-}
+    cursor: pointer;
+    background-color: #444;
+  }
+  
+  button:active,
+  button:focus {
+    outline: none;
+  }
 
-button:active,
-button:focus {
-  outline: none;
-}
+#error {
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    position: relative; 
+    z-index: 100; 
+  }
+  
+  #card-area {
+    margin-top: 80px;
+    position: relative; 
+  }
+  
+  #card-area > img {
+    position: absolute;
+    left: 50%;
+    transform-origin: center;
+    transform: translateX(-50%); 
+  }
 
-#card-area {
-  margin-top: 80px;
-}
-
-#card-area > img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
+  #reset-deck {
+    position: fixed; /* Fix position to top-right corner */
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    z-index: 200;
+  }
